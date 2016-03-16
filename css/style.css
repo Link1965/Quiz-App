@@ -1,0 +1,31 @@
+body {
+	background-image: url('../images/legendofzelda.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.quiz-section {
+	background-color: #fff0b3;
+	height: 700px;
+	width: 600px;
+	float: left;
+	margin-top: 130px;
+	margin-left: 100px;
+	border-style: inset;
+	border-width: 2px;
+	border-color: black;
+	text-align: center;
+}
+
+.introduction h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 35px;
+}
+
+.introduction p {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: 2px;
+	font-size: 18px;
+	width: 500px;
+	padding-left: 50px;
+}
