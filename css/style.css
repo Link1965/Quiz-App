@@ -6,7 +6,7 @@ body {
 
 .quiz-section {
 	background-color: #fff0b3;
-	height: 700px;
+	height: 500px;
 	width: 600px;
 	float: left;
 	margin-top: 130px;
@@ -24,8 +24,26 @@ body {
 
 .introduction p {
 	font-family: 'PT Sans Narrow', sans-serif;
-	font-weight: 2px;
 	font-size: 18px;
 	width: 500px;
 	padding-left: 50px;
+}
+
+.start {
+	
+}
+.question1 {
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	padding-top: 40px;
+	font-size: 23px;
+	font-weight: bold;
+	width: 450px;
+	padding-left: 80px;
+} 
+
+.question-list {
+	padding-top: 10px;
+	list-style-type: none;
+	float: left;
 }
