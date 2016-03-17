@@ -40,10 +40,21 @@ body {
     border-radius: 4px;
     border-color: black;
 }
+.start:active {
+	text-align: center;
+ 	width: 100px;
+ 	margin-left: 245px;
+ 	margin-top: 100px;
+ 	background-color: #0099cc;
+    font-size: 25px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: black;
+}
 
 .question1 {
 	font-family: 'Dancing Script', cursive;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-size: 23px;
 	font-weight: bold;
 	width: 450px;
@@ -63,7 +74,7 @@ body {
 
 .question2 {
 	font-family: 'Dancing Script', cursive;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-size: 23px;
 	font-weight: bold;
 	width: 450px;
@@ -77,7 +88,7 @@ body {
 
 .question3 {
 	font-family: 'Dancing Script', cursive;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-size: 23px;
 	font-weight: bold;
 	width: 450px;
@@ -91,7 +102,7 @@ body {
 
 .question4 {
 	font-family: 'Dancing Script', cursive;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-size: 23px;
 	font-weight: bold;
 	width: 450px;
@@ -105,7 +116,7 @@ body {
 
 .question5 {
 	font-family: 'Dancing Script', cursive;
-	padding-top: 20px;
+	padding-top: 100px;
 	font-size: 23px;
 	font-weight: bold;
 	width: 450px;
@@ -115,4 +126,29 @@ body {
 
 .question5 p {
 	text-align: center;
+}
+
+.submit {
+  	text-align: center;
+ 	width: 100px;
+ 	margin-left: 245px;
+ 	margin-top: 50px;
+ 	background-color: #66d9ff;
+    font-size: 15px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: black;
+    display: none;
+}
+.submit:active {
+	text-align: center;
+ 	width: 100px;
+ 	margin-left: 245px;
+ 	margin-top: 50px;
+ 	background-color: #0099cc;
+    font-size: 15px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: black;
+    display: none;
 }
