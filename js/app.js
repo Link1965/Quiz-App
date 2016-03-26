@@ -30,6 +30,10 @@ var questions = [ {
     }];
 
 $(document).ready(function(){
+    $("#start").click(function()
+        $(".introduction").hide();
+        $("#question").show();
+    );
 
     questions.forEach(function(question){
         $("#question").append("<h2>" + question.question + "</h2>");
