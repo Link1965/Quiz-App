@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-$(document).ready(function() {
-	$('.start').click(function() {
-   		$('.introduction').hide();
-    	$('.start').hide();
-    	$('.question1').show();
-    	$('.submit').show();
-	 });
- 	
-=======
 var questions = [ {
     id: 1,
     question: "What is the name of the Golden Goddesses that created the land of Hyrule?",
@@ -35,21 +25,50 @@ var questions = [ {
     {
     id: 5,
     question: "What song would you play to warp to the Forest Temple?",
-    answers: ["Forest Lullaby","Minuet of Forest","Bolero of Trees","Serenade of the Woods"]
+    answers: ["Forest Lullaby","Minuet of Forest","Bolero of Trees","Serenade of the Woods"],
     correctAnswer: "Minuet of Forest"
     }];
 
-$(document).ready(function(){
-    $("#start").click(function()
-        $(".introduction").hide();
-        $("#question").show();
-    );
+var counter = 0;
+var selectedAnswers = [];
+var numberCorrect = 0;
 
-    questions.forEach(function(question){
-        $("#question").append("<h2>" + question.question + "</h2>");
-    question.answers.forEach(function(answer){
-        $("#question").append("<p>" + answer + "</p>");
-        });
-    });  
->>>>>>> b22e36219b6735328d1af996d43e25580a023245
+$(document).ready(function(){
+    $("#start").click(function(){
+        $(".introduction").hide();
+        $("#start").hide();
+        $("#submit").show();
+        $("#question").show();
+        buildQuestion(questions[counter++]);
+    });
+
+    $("#submit").click(function(){
+        if (!$("input[name='name']").is(':checked')) {
+            /*Notify the user that the item isn't selected 
+            w/ an alert or div with an error*/
+            //return;
+        }
+        var selectedAnswer = $("input[name='answerGroup']:checked").data("id");
+        selectedAnswers.push(selectedAnswer);
+        if (selectedAnswer === questions[counter].correctAnswer){
+            $("#correctAnswer").fadeIn(600);
+            numberCorrect++;
+        }
+        else {
+            $("#incorrectAnswer").fadeIn(600);
+            //append answer to html
+        }
+
+        buildQuestion(questions[counter++]);
+
+    });
+  
 });
+
+function buildQuestion(question){
+    $("#question").html("");
+    $("#question").append("<h2>" + question.question + "</h2>");
+        question.answers.forEach(function(answer){
+            $("#question").append('<p> <input name="answerGroup" data-id="'+ answer +'" type="radio"/>' + answer + '</p>');
+        });
+}
