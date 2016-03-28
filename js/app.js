@@ -60,6 +60,12 @@ $(document).ready(function(){
         }
 
         buildQuestion(questions[counter++]);
+        if (counter === questions.length) {
+
+        }
+        else {
+            buildQuestion(questions[counter++]);
+        }
 
     });
   
