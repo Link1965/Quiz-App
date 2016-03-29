@@ -12,13 +12,14 @@ body {
 	border-width: 2px;
 	border-color: black;
 	margin-top: 100px;
-	margin-left: 100px;
+	margin-left: 80px;
 }
 
 .introduction h1 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 35px;
 	text-align: center;
+	width: 600px;
 }
 
 .introduction p {
@@ -95,6 +96,15 @@ body {
 
 #incorrectAnswer {
 	display: none;
+	font-family: 'Dancing Script', cursive;
+	background-color: #fff0b3;
+	height: 500px;
+	width: 600px;
+	border-style: inset;
+	border-width: 2px;
+	border-color: black;
+	margin-top: 100px;
+	margin-left: 100px;
 }
 
 

@@ -55,7 +55,11 @@ $(document).ready(function(){
             numberCorrect++;
         }
         else {
-            $("#incorrectAnswer").fadeIn(600);
+            $("#incorrectAnswer").fadeIn(1500);
+            $("#incorrectAnswer").delay(1500);
+            $("#incorrectAnswer").fadeOut(1500);
+
+
             //append answer to html
         }
 
