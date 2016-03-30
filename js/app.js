@@ -61,6 +61,8 @@ $(document).ready(function(){
             $("#incorrectAnswer").fadeIn(1500);
             $("#incorrectAnswer").delay(2000);
             $("#incorrectAnswer").fadeOut(1500);
+            $("#incorrectAnswer").append('<h2> ')
+
 
 
             //append answer to html
