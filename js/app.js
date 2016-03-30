@@ -2,7 +2,7 @@ var questions = [ {
     id: 1,
     question: "What is the name of the Golden Goddesses that created the land of Hyrule?",
     answers: ["Saria, Zelda, and Impa","Din, Nayru, and Farore","Lily, Violet, and Rose","Annalise, Clara, and Josaphine"],
-    correctAnswer: "Saria, Zelda, and Impa"
+    correctAnswer: "Din, Nayru, and Farore"
     }, 
     {
     id: 2,
@@ -39,7 +39,7 @@ $(document).ready(function(){
         $("#start").hide();
         $("#submit").show();
         $("#question").show();
-        buildQuestion(questions[counter++]);
+        buildQuestion(questions[counter]);
     });
 
     $("#submit").click(function(){
@@ -51,26 +51,28 @@ $(document).ready(function(){
         var selectedAnswer = $("input[name='answerGroup']:checked").data("id");
         selectedAnswers.push(selectedAnswer);
         if (selectedAnswer === questions[counter].correctAnswer){
-            $("#correctAnswer").fadeIn(600);
+            $("#correctAnswer").fadeIn(1500);
+            $("#correctAnswer").delay(2000);
+            $("#correctAnswer").fadeOut(1500);
             numberCorrect++;
         }
+
         else {
             $("#incorrectAnswer").fadeIn(1500);
-            $("#incorrectAnswer").delay(1500);
+            $("#incorrectAnswer").delay(2000);
             $("#incorrectAnswer").fadeOut(1500);
 
 
             //append answer to html
         }
 
-        buildQuestion(questions[counter++]);
+        //buildQuestion(questions[counter++]);
         if (counter === questions.length) {
 
         }
         else {
-            buildQuestion(questions[counter++]);
+            buildQuestion(questions[++counter]);
         }
-
     });
   
 });
