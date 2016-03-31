@@ -44,10 +44,12 @@ $(document).ready(function(){
 
     $("#submit").click(function(){
         if (!$("input[name='name']").is(':checked')) {
-            /*Notify the user that the item isn't selected 
-            w/ an alert or div with an error*/
-            //return;
+            $("#noAnswer").fadeIn(1500);
+            $("#noAnswer").delay(2000);
+            $("#noAnswer").fadeOut(1500);
+            return;
         }
+        
         var selectedAnswer = $("input[name='answerGroup']:checked").data("id");
         selectedAnswers.push(selectedAnswer);
         if (selectedAnswer === questions[counter].correctAnswer){
@@ -61,11 +63,7 @@ $(document).ready(function(){
             $("#incorrectAnswer").fadeIn(1500);
             $("#incorrectAnswer").delay(2000);
             $("#incorrectAnswer").fadeOut(1500);
-            $("#incorrectAnswer").append('<h2> ')
-
-
-
-            //append answer to html
+            $("#incorrectAnswer").append('<h2>' + "You're incorrect!  The correct answer is: " + questions[counter].correctAnswer + '</h2>');
         }
 
         //buildQuestion(questions[counter++]);

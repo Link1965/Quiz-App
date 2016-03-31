@@ -90,9 +90,6 @@ body {
     border-color: black;
 }
 
-#correctAnswer {
-	display: none;
-}
 
 .results {
 	display: none;
@@ -107,7 +104,10 @@ body {
 	margin-left: 100px;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	left: -20px;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 30px;
 }
 
 
