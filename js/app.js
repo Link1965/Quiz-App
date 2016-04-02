@@ -43,7 +43,7 @@ $(document).ready(function(){
     });
 
     $("#submit").click(function(){
-        if (!$("input[name='name']").is(':checked')) {
+        if (!$("input[name='answerGroup']").is(':checked')) {
             $("#noAnswer").fadeIn(1500);
             $("#noAnswer").delay(2000);
             $("#noAnswer").fadeOut(1500);
@@ -53,22 +53,23 @@ $(document).ready(function(){
         var selectedAnswer = $("input[name='answerGroup']:checked").data("id");
         selectedAnswers.push(selectedAnswer);
         if (selectedAnswer === questions[counter].correctAnswer){
-            $("#correctAnswer").fadeIn(1500);
-            $("#correctAnswer").delay(2000);
+            $("#correctAnswer").fadeIn(0);
+            $("#correctAnswer").delay(1000);
             $("#correctAnswer").fadeOut(1500);
             numberCorrect++;
         }
 
         else {
-            $("#incorrectAnswer").fadeIn(1500);
+            $("#incorrectAnswer").fadeIn(0);
             $("#incorrectAnswer").delay(2000);
             $("#incorrectAnswer").fadeOut(1500);
-            $("#incorrectAnswer").append('<h2>' + "You're incorrect!  The correct answer is: " + questions[counter].correctAnswer + '</h2>');
+            $("#incorrectAnswer").html('<h2>' + "You're incorrect!  The correct answer is: " + "</br>" + questions[counter].correctAnswer + '</h2>');
         }
 
-        //buildQuestion(questions[counter++]);
         if (counter === questions.length) {
-
+            $("#questions").hide();
+            $("#submit").hide();
+            $("#end-page").html('<h2>' + "You got " + numberCorrect + " / 5 answers correct!" + '</h2>');
         }
         else {
             buildQuestion(questions[++counter]);
