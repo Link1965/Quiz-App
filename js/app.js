@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     $("#submit").click(function(){
         if (!$("input[name='answerGroup']").is(':checked')) {
-            $("#noAnswer").fadeIn(1500);
+            $("#noAnswer").fadeIn(0);
             $("#noAnswer").delay(2000);
             $("#noAnswer").fadeOut(1500);
             return;
@@ -67,7 +67,6 @@ $(document).ready(function(){
         }
 
         if (counter === questions.length) {
-            $("#questions").hide();
             $("#submit").hide();
             $("#end-page").html('<h2>' + "You got " + numberCorrect + " / 5 answers correct!" + '</h2>');
         }
@@ -82,6 +81,6 @@ function buildQuestion(question){
     $("#question").html("");
     $("#question").append("<h2>" + question.question + "</h2>");
         question.answers.forEach(function(answer){
-            $("#question").append('<p> <input name="answerGroup" data-id="'+ answer +'" type="radio"/>' + answer + '</p>');
+            $("#question").append('<h3> <input name="answerGroup" data-id="'+ answer +'" type="radio"/>' + answer + '</h3>');
         });
 }
